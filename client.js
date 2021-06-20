@@ -35,7 +35,10 @@ function monthlyCosts() { //calculates monthlyCosts of all employees
         monthlyCost += person.annualSalary / 12;
         el.empty();
         el.append(monthlyCost.toFixed(2));
-    }
+    };
+    if (monthlyCost >= 20000) {
+        $('div').addClass('p-3 mb-2 bg-danger text-white');
+    };
     console.log(monthlyCost); //just to check the value in the log
 }
 
@@ -51,7 +54,7 @@ function displayEmployees() { //function to display employees in the table
             <td id="jobTitleTable">${person.jobTitle}</td>
             <td id="annualSalaryTable">${person.annualSalary}</td>
             <td id="deleteButtonTable">
-                <button type="button" class="btn btn-danger btn-sm" id="DeleteEmployeeButton">Delete Employee</button>
+                <button type="button" class="btn btn-danger btn-sm" id="DeleteEmployeeButton">Delete</button>
             </td>
         </tr>
         `);
