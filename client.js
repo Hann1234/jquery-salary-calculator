@@ -18,7 +18,7 @@ function addEmployee() {
     $('#jobTitle').val('');
     $('#annualSalary').val('');
 
-    console.log('Employee added:', employee); //takes inputs and adds them to employee object, then clears input fields.
+    console.log('Employee added:', employee); //took inputs and added them to employee object, then cleared input fields.
 
     employeeArray.push(employee);
 
