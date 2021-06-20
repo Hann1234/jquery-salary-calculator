@@ -31,21 +31,36 @@
             <label for="annualSalary">Annual Salary:<br>
                 <input id="annualSalary" type="text" minlength="0" maxlength="99" class="form-input"/>
             </label>
-            <button type="button" class="btn btn-primary">Add Employee</button>
+            <button type="button" class="btn btn-primary" id="addEmployeeButton">Add Employee</button>
             <!--Can you go over how to use the active bootstrap button functionality? aria-pressed = "true"-->
         </form>
+        <h3>Employees</h3>
         <table class="table table-striped">
             <caption>Employees</caption>
             <thead>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Employee ID</th>
-                <th>Job Title</th>
-                <th>Annual Salary</th>
-                <th>Remove Employee</th>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Employee ID</th>
+                    <th>Job Title</th>
+                    <th>Annual Salary</th>
+                    <th>Remove Employee</th>
+                </tr>
             </thead>
-            <tr></tr>
+            <tbody>
+                <tr>
+                    <td id="firstNameTable"></td>
+                    <td id="lastNameTable"></td>
+                    <td id="employeeIDTable"></td>
+                    <td id="jobTitleTable"></td>
+                    <td id="annualSalaryTable"></td>
+                    <td id="deleteButtonTable"></td>
+                </tr>
+            </tbody>
         </table>
+        <div class="totalMonthlyCost">
+            <h3 id="totalMonthlyCostH2">Total Monthly: $<span id = "totalMonthly"></span></h3>
+        </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <script src="jquery-3.6.0.min.js"></script>
