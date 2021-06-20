@@ -36,7 +36,7 @@ function monthlyCosts() { //calculates monthlyCosts of all employees
         el.empty();
         el.append(monthlyCost.toFixed(2));
     };
-    if (monthlyCost >= 20000) {
+    if (monthlyCost > 20000) { //changes background to red for monthly total if over 20k
         $('div').addClass('p-3 mb-2 bg-danger text-white');
     };
     console.log(monthlyCost); //just to check the value in the log
@@ -47,19 +47,22 @@ function displayEmployees() { //function to display employees in the table
     el.empty();
     for (const person of employeeArray) {
         el.append(`
-        <tr>
+        <tr id="tableRow">
             <td id="firstNameTable">${person.firstName}</td>
             <td id="lastNameTable">${person.lastName}</td>
             <td id="employeeIDTable">${person.employeeID}</td>
             <td id="jobTitleTable">${person.jobTitle}</td>
             <td id="annualSalaryTable">${person.annualSalary}</td>
             <td id="deleteButtonTable">
-                <button type="button" class="btn btn-danger btn-sm" id="DeleteEmployeeButton">Delete</button>
+                <button type="button" class="btn btn-danger btn-sm" id="deleteEmployeeButton">Delete</button>
             </td>
         </tr>
         `);
     }
+}
 
+function deleteEmployee() {
+    $(this).remove;
 }
 
 function onReady() { //on page load clears input fields, sets value of employees to 0, and creates a listener for the button being clicked.
@@ -75,5 +78,6 @@ function onReady() { //on page load clears input fields, sets value of employees
     tot.append(0);
 
     $('#addEmployeeButton').on('click',addEmployee);
+    $('.table table-striped').on('click','#deleteEmployeeButton', deleteEmployee);
   }
 

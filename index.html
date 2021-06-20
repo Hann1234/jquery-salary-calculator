@@ -16,7 +16,7 @@
         <form>
             <!--Is there a reason to add this stuff through the JS file using append or prepend instead of just doing it in html?-->
             <!--Creates input fields and button below-->
-            <label for="firstName">First Name:<br>
+            <label for="firstName">First Name:<br> <!--Added labels for accessibility-->
                 <input id="firstName" type="text" minlength="0" maxlength="99" class="form-input"/>
             </label>
             <label for="lastName">Last Name:<br>
@@ -35,8 +35,8 @@
             <!--Can you go over how to use the active bootstrap button functionality? aria-pressed = "true"-->
         </form>
         <h3>Employees</h3>
-        <table class="table table-striped">
-            <caption>Employees</caption>
+        <table class="table table-striped" id="table">
+            <caption>Employees</caption> <!--Added caption for accessibility-->
             <thead>
                 <tr>
                     <th>First Name</th>
