@@ -61,8 +61,8 @@ function displayEmployees() { //function to display employees in the table
     }
 }
 
-function deleteEmployee() {
-    $(this).remove;
+function deleteEmployee() { //This removes the row but keeps the employee in the array...need to figure out how to remove the employee from the array then repopulate the table with the new array
+$(this).closest('tr').remove();
 }
 
 function onReady() { //on page load clears input fields, sets value of employees to 0, and creates a listener for the button being clicked.
@@ -78,6 +78,6 @@ function onReady() { //on page load clears input fields, sets value of employees
     tot.append(0);
 
     $('#addEmployeeButton').on('click',addEmployee);
-    $('.table table-striped').on('click','#deleteEmployeeButton', deleteEmployee);
+    $('#table').on('click','#deleteEmployeeButton', deleteEmployee);
   }
 
