@@ -25,6 +25,7 @@ function addEmployee() {
     console.log('Employee Array:', employeeArray); //added employee object to employee array.
 
     monthlyCosts();
+    displayEmployees();
 }
 
 function monthlyCosts() { //calculates monthlyCosts of all employees
@@ -35,7 +36,24 @@ function monthlyCosts() { //calculates monthlyCosts of all employees
         el.empty();
         el.append(monthlyCost.toFixed(2));
     }
-    console.log(monthlyCost);
+    console.log(monthlyCost); //just to check the value in the log
+}
+
+function displayEmployees() { //function to display employees in the table
+    let el = $('tbody');
+    el.empty();
+    for (const person of employeeArray) {
+        el.append(`
+        <tr>
+            <td id="firstNameTable">${person.firstName}</td>
+            <td id="lastNameTable">${person.lastName}</td>
+            <td id="employeeIDTable">${person.employeeID}</td>
+            <td id="jobTitleTable">${person.jobTitle}</td>
+            <td id="annualSalaryTable">${person.annualSalary}</td>
+            <td id="deleteButtonTable">Delete Button</td>
+        </tr>
+        `);
+    }
 
 }
 
