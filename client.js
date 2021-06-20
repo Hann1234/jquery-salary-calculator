@@ -50,7 +50,9 @@ function displayEmployees() { //function to display employees in the table
             <td id="employeeIDTable">${person.employeeID}</td>
             <td id="jobTitleTable">${person.jobTitle}</td>
             <td id="annualSalaryTable">${person.annualSalary}</td>
-            <td id="deleteButtonTable">Delete Button</td>
+            <td id="deleteButtonTable">
+                <button type="button" class="btn btn-danger btn-sm" id="DeleteEmployeeButton">Delete Employee</button>
+            </td>
         </tr>
         `);
     }
